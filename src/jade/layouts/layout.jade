@@ -1,0 +1,20 @@
+doctype html
+html.no-js
+  head
+    include ../partials/head
+    block head
+
+  body(data-spy="scroll", data-target="#sidebar")
+    header 
+        include ../partials/top-nav
+        block header
+    
+    block content  
+    
+    footer
+        include ../partials/footer 
+        block footer
+    
+    block modal  
+    block js
+    include ../partials/js-application
