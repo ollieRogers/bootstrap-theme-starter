@@ -2,29 +2,46 @@ extends ../layouts/layout
 
 block content
 
-    
-    .fw-banner
-        .container
-            .row 
-                .col-md-12
-                    .jumbotron
-                        h1 FAQs
-                        p Straplines and selling points go here
-                        a.btn.btn-primary.btn-lg(href="#") Click me
-
     .container
         .row 
-            .col-md-12
-                h1 Remora bootstrap component library
-    .container
-      .row 
-        .col-md-9      
-          h1.page-header Homepage
-          p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores minima sit, placeat obcaecati veniam iusto. Saepe, nobis iste quam. Fuga nulla recusandae ratione excepturi consectetur officiis facilis illo blanditiis, ea?
-          p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores minima sit, placeat obcaecati veniam iusto. Saepe, nobis iste quam. Fuga nulla recusandae ratione excepturi consectetur officiis facilis illo blanditiis, ea?
-          p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores minima sit, placeat obcaecati veniam iusto. Saepe, nobis iste quam. Fuga nulla recusandae ratione excepturi consectetur officiis facilis illo blanditiis, ea?
-          p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores minima sit, placeat obcaecati veniam iusto. Saepe, nobis iste quam. Fuga nulla recusandae ratione excepturi consectetur officiis facilis illo blanditiis, ea?
-          h2 header 2
-          p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores minima sit, placeat obcaecati veniam iusto. Saepe, nobis iste quam. Fuga nulla recusandae ratione excepturi consectetur officiis facilis illo blanditiis, ea?
-          p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores minima sit, placeat obcaecati veniam iusto. Saepe, nobis iste quam. Fuga nulla recusandae ratione excepturi consectetur officiis facilis illo blanditiis, ea?
-          
+          .col-md-12
+              h1.page-header FAQs
+              p.lead  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, fugit delectus soluta molestias, expedita deserunt labore animi accusamus dolores ipsam, corrupti officia impedit quae! Ab eum nihil error, hic. Doloribus!
+              
+              #accordion.panel-group
+                  .panel.panel-default
+                    .panel-heading
+                      h4.panel-title
+                        a.accordion-toggle(data-toggle='collapse', data-parent='#accordion2', href='#collapse-1')
+                          | Question 1
+                    #collapse-1.panel-collapse.collapse.in
+                      .panel-body  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium similique repellendus recusandae repudiandae consectetur praesentium ullam vel doloribus iure fugit laudantium omnis, rerum. Numquam necessitatibus ipsum voluptatem dicta dignissimos nobis.
+                  .panel.panel-default
+                    .panel-heading
+                      h4.panel-title
+                        a.accordion-toggle(data-toggle='collapse', data-parent='#accordion2', href='#collapse-2')
+                          | Question 2
+                    #collapse-2.panel-collapse.collapse
+                      .panel-body  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur numquam corrupti qui dignissimos officia, excepturi soluta explicabo et porro suscipit, eveniet, architecto nesciunt molestias eius, dolor est aut sapiente odit.
+                  .panel.panel-default
+                      .panel-heading
+                        h4.panel-title
+                          a.accordion-toggle(data-toggle='collapse', data-parent='#accordion2', href='#collapse-3')
+                            | Question 3
+                      #collapse-3.panel-collapse.collapse
+                        .panel-body  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur numquam corrupti qui dignissimos officia, excepturi soluta explicabo et porro suscipit, eveniet, architecto nesciunt molestias eius, dolor est aut sapiente odit.
+                   .panel.panel-default
+                       .panel-heading
+                         h4.panel-title
+                           a.accordion-toggle(data-toggle='collapse', data-parent='#accordion2', href='#collapse-4')
+                             | Question 4
+                       #collapse-4.panel-collapse.collapse
+                         .panel-body  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur numquam corrupti qui dignissimos officia, excepturi soluta explicabo et porro suscipit, eveniet, architecto nesciunt molestias eius, dolor est aut sapiente odit.
+                    .panel.panel-default
+                        .panel-heading
+                          h4.panel-title
+                            a.accordion-toggle(data-toggle='collapse', data-parent='#accordion2', href='#collapse-5')
+                              | Question 5
+                        #collapse-5.panel-collapse.collapse
+                          .panel-body  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur numquam corrupti qui dignissimos officia, excepturi soluta explicabo et porro suscipit, eveniet, architecto nesciunt molestias eius, dolor est aut sapiente odit.
+              

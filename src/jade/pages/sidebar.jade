@@ -1,25 +1,16 @@
 extends ../layouts/layout
 
 block content
-
-    
-    .fw-banner
-        .container
-            .row 
-                .col-md-12
-                    .jumbotron
-                        h1 Sidebar
-                        p Straplines and selling points go here
-                        a.btn.btn-primary.btn-lg(href="#") Click me
-
     .container
         .row 
             .col-md-12
-                h1 Remora bootstrap component library
+                h1.page-header Sidebar
     .container
       .row 
-        .col-md-9      
-          h1.page-header Homepage
+        .col-md-9     
+          img.img-responsive(src="http://placehold.it/1500x500")
+          
+          h2 Sub header
           p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores minima sit, placeat obcaecati veniam iusto. Saepe, nobis iste quam. Fuga nulla recusandae ratione excepturi consectetur officiis facilis illo blanditiis, ea?
           p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores minima sit, placeat obcaecati veniam iusto. Saepe, nobis iste quam. Fuga nulla recusandae ratione excepturi consectetur officiis facilis illo blanditiis, ea?
           p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores minima sit, placeat obcaecati veniam iusto. Saepe, nobis iste quam. Fuga nulla recusandae ratione excepturi consectetur officiis facilis illo blanditiis, ea?
@@ -27,4 +18,15 @@ block content
           h2 header 2
           p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores minima sit, placeat obcaecati veniam iusto. Saepe, nobis iste quam. Fuga nulla recusandae ratione excepturi consectetur officiis facilis illo blanditiis, ea?
           p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores minima sit, placeat obcaecati veniam iusto. Saepe, nobis iste quam. Fuga nulla recusandae ratione excepturi consectetur officiis facilis illo blanditiis, ea?
-          
+        .col-md-3.sidebar
+            h2 Side header
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore eligendi natus enim illum possimus, animi veniam vitae dolorum quos iste iusto cupiditate aspernatur facilis nulla incidunt officia delectus repellendus impedit?
+            form
+                .form-group
+                  input.form-control.input-sm(type='text', placeholder='name')
+                .form-group
+                  input.form-control.input-sm(type='text', placeholder='email')
+                .form-group
+                  textarea.form-control(rows='3', placeholder='message')
+                .form-group
+                  button.btn.btn-info.btn-block(type='submit') Submit
