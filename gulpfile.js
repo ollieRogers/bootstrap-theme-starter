@@ -2,13 +2,14 @@
 
 // Load plugins
 var gulp         = require('gulp');
-var less         = require('gulp-sass'); // TODO replace with SASS
+var sass         = require('gulp-sass');
+var sourcemaps   = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var rename       = require('gulp-rename');
 var concat       = require('gulp-concat');
 var plumber      = require('gulp-plumber');
 var gutil        = require('gulp-util');
-var pug         = require('gulp-pug');
+var pug          = require('gulp-pug');
 var browsersync  = require('browser-sync');
 var notify       = require('gulp-notify');
 
@@ -84,12 +85,14 @@ gulp.task('js', function(){
 
 // Compile less files to /dist
 gulp.task('css', function() {
-    return gulp.src('./src/theme/less/theme.sass')
+    return gulp.src('./src/theme/sass/theme.scss')
+        .pipe(sourcemaps.init())
         .pipe(plumber({ errorHandler: onError }))
-        .pipe(less({ style: 'expanded', }))
+        .pipe(sass({ style: 'expanded', }))
         .pipe(gulp.dest('./dist/theme/css/'))
         .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
         .pipe(rename({ suffix: '.min' }))
+        .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./dist/theme/css/'))
         .pipe(browsersync.reload({ stream:true }))
         .pipe(notify({ message: 'CSS compiled' }));
@@ -119,7 +122,7 @@ gulp.task('default', ['copy', 'css','js', 'html', 'browser-sync'], function(){
 
     // will run task and reload browser on file change
     gulp.watch('./src/pug/**/*.pug', ['html', browsersync.reload]);
-    gulp.watch('./src/theme/less/**/*.less', ['css', browsersync.reload]);
+    gulp.watch('./src/theme/sass/**/*.scss', ['css', browsersync.reload]);
     gulp.watch('./src/theme/js/**/*.js', ['js', browsersync.reload]);
 
 });
