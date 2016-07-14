@@ -2,21 +2,15 @@
 
 // Load plugins
 var gulp         = require('gulp');
-var less         = require('gulp-less');
+var less         = require('gulp-sass'); // TODO replace with SASS
 var autoprefixer = require('gulp-autoprefixer');
-var stripdebug   = require('gulp-strip-debug');
-var uglify       = require('gulp-uglify');
 var rename       = require('gulp-rename');
-var replace      = require('gulp-replace');
 var concat       = require('gulp-concat');
-var notify       = require('gulp-notify');
-var minifycss    = require('gulp-minify-css');
 var plumber      = require('gulp-plumber');
 var gutil        = require('gulp-util');
-var base64       = require('gulp-base64');
-var imagemin     = require('gulp-imagemin');
-var jade         = require('gulp-jade');
+var pug         = require('gulp-pug');
 var browsersync  = require('browser-sync');
+var notify       = require('gulp-notify');
 
 
 
@@ -90,14 +84,12 @@ gulp.task('js', function(){
 
 // Compile less files to /dist
 gulp.task('css', function() {
-    return gulp.src('./src/theme/less/theme.less')
+    return gulp.src('./src/theme/less/theme.sass')
         .pipe(plumber({ errorHandler: onError }))
         .pipe(less({ style: 'expanded', }))
         .pipe(gulp.dest('./dist/theme/css/'))
         .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
-        .pipe(base64({ extensions:['svg'] }))
         .pipe(rename({ suffix: '.min' }))
-        .pipe(minifycss())
         .pipe(gulp.dest('./dist/theme/css/'))
         .pipe(browsersync.reload({ stream:true }))
         .pipe(notify({ message: 'CSS compiled' }));
@@ -108,8 +100,8 @@ gulp.task('css', function() {
 
 // Jade task compile html to jade templates to /dist
 gulp.task('html', function() {
-    return gulp.src('./src/jade/pages/*.jade')
-        .pipe(jade({
+    return gulp.src('./src/pug/pages/*.pug')
+        .pipe(pug({
             locals: {
                 pretty: true
             }
@@ -126,7 +118,7 @@ gulp.task('html', function() {
 gulp.task('default', ['copy', 'css','js', 'html', 'browser-sync'], function(){
 
     // will run task and reload browser on file change
-    gulp.watch('./src/jade/**/*.jade', ['html', browsersync.reload]);
+    gulp.watch('./src/pug/**/*.pug', ['html', browsersync.reload]);
     gulp.watch('./src/theme/less/**/*.less', ['css', browsersync.reload]);
     gulp.watch('./src/theme/js/**/*.js', ['js', browsersync.reload]);
 
