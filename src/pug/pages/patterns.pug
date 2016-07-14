@@ -1171,36 +1171,51 @@ block content
                 h2#buttons Buttons
                 // Styled buttons
                 p.bse-buttons
-                    button.btn.btn-default(type='button')
-                        | button.btn.btn-default
+                    button.btn.btn-default(type='button') button.btn.btn-default
+                    | &nbsp;
                     button.btn.btn-primary(type='button') .btn-primary
+                    | &nbsp;
                     button.btn.btn-success(type='button') .btn-success
+                    | &nbsp;
                     button.btn.btn-info(type='button') .btn-info
+                    | &nbsp;
                     button.btn.btn-warning(type='button') .btn-warning
+                    | &nbsp;
                     button.btn.btn-danger(type='button') .btn-danger
+                    | &nbsp;
                     button.btn.btn-link(type='button') .btn-link
                 // Button sizes
                 p.bse-buttons
                     button.btn.btn-default.btn-lg(type='button') .btn-lg
+                    | &nbsp;
                     button.btn.btn-default(type='button') Default button size
+                    | &nbsp;
                     button.btn.btn-default.btn-sm(type='button') .btn-sm
+                    | &nbsp;
                     button.btn.btn-default.btn-xs(type='button') .btn-xs
                 // Block level buttons
                 p
                     button.btn.btn-primary.btn-block(type='button') .btn-block
+                    | &nbsp;
                     button.btn.btn-default.btn-block(type='button') .btn-block
                 // Button tags
                 p.bse-buttons
                     a.btn.btn-default(href='#') a
+                    | &nbsp;
                     button.btn.btn-default(type='button') button
+                    | &nbsp;
                     input.btn.btn-default(type='button', value='input[type="button"]')
+                    | &nbsp;
                     input.btn.btn-default(type='submit', value='input[type="submit"]')
                 p.bse-buttons
                     // Active state
                     a.btn.btn-default.active(href='#') a.active
+                    | &nbsp;
                     button.btn.btn-default.active(type='button') button.active
+                    | &nbsp;
                     // Disabled state
                     a.btn.btn-default.disabled(href='#') a.disabled
+                    | &nbsp;
                     button.btn.btn-default(type='button', disabled='disabled') button[disabled]
                 .section-divider
                 h2#images Images
@@ -1254,17 +1269,26 @@ block content
                 // Contextual colors
                 p
                     span.text-muted .text-muted
+                    | &nbsp;
                     span.text-primary .text-primary
+                    | &nbsp;
                     span.text-success .text-success
+                    | &nbsp;
                     span.text-info .text-info
+                    | &nbsp;
                     span.text-warning .text-warning
+                    | &nbsp;
                     span.text-danger .text-danger
                 // Contextual backgrounds
                 p
                     span.bg-primary .bg-primary
+                    | &nbsp;
                     span.bg-success .bg-success
+                    | &nbsp;
                     span.bg-info .bg-info
+                    | &nbsp;
                     span.bg-warning .bg-warning
+                    | &nbsp;
                     span.bg-danger .bg-danger
                 // Close icon
                 p
@@ -1350,11 +1374,13 @@ block content
                             button.btn.btn-default(type='button') .btn-group-lg #1
                             button.btn.btn-default(type='button') #2
                             button.btn.btn-default(type='button') #3
+                        | &nbsp;
                         // Small button group
                         .btn-group.btn-group-sm
                             button.btn.btn-default(type='button') .btn-group-sm #1
                             button.btn.btn-default(type='button') #2
                             button.btn.btn-default(type='button') #3
+                        | &nbsp;
                         // Extra small button group
                         .btn-group.btn-group-xs
                             button.btn.btn-default(type='button') .btn-group-xs #1
@@ -1377,6 +1403,7 @@ block content
                                     a(href='#') Link #2
                     // Only .btn-group has left padding inside .btn-toolbar
                     // Vertical button group with dropdown
+                    | &nbsp;
                     .btn-group-vertical
                         button.btn.btn-default(type='button') .btn-group-vertical button
                         .btn-group
@@ -1412,6 +1439,7 @@ block content
                             li
                                 a(href='#') Link #2
                     // Split button right dropup
+                    | &nbsp;
                     .btn-group.dropup
                         button.btn.btn-default(type='button') .dropdown-menu-right →
                         button.btn.btn-default.dropdown-toggle(data-toggle='dropdown', type='button')
@@ -1601,6 +1629,7 @@ block content
                                 form.navbar-form.navbar-left
                                     .form-group
                                         input.form-control(type='text', placeholder='.navbar-form.navbar-left')
+                                    | &nbsp;
                                     button.btn.btn-default(type='submit') Submit
                                 ul.nav.navbar-nav.navbar-right
                                     li.dropdown
@@ -2143,10 +2172,13 @@ block content
                 .text-center.js-html-inspector
                     button.btn.btn-primary(data-toggle='tooltip', data-placement='left', type='button', title='[title]')
                         | Left
+                    | &nbsp;
                     button.btn.btn-primary(data-toggle='tooltip', data-placement='top', type='button', title='[title]')
                         | Top
+                    | &nbsp;
                     button.btn.btn-primary(data-toggle='tooltip', data-placement='bottom', type='button', title='[title]')
                         | Bottom
+                    | &nbsp;
                     button.btn.btn-primary(data-toggle='tooltip', data-placement='right', type='button', title='[title]')
                         | Right
                 .text-center.js-html-inspector
@@ -2188,10 +2220,13 @@ block content
                 .text-center.js-html-inspector
                     button.btn.btn-primary(data-toggle='popover', data-placement='left', data-content='[data-content]', type='button', title='[title]')
                         | Left
+                    | &nbsp;
                     button.btn.btn-primary(data-toggle='popover', data-placement='top', data-content='[data-content]', type='button', title='[title]')
                         | Top
+                    | &nbsp;
                     button.btn.btn-primary(data-toggle='popover', data-placement='bottom', data-content='[data-content]', type='button', title='[title]')
                         | Bottom
+                    | &nbsp;
                     button.btn.btn-primary(data-toggle='popover', data-placement='right', data-content='[data-content]', type='button', title='[title]')
                         | Right
                 .text-center.js-html-inspector
@@ -2257,8 +2292,10 @@ block content
                 .bse-buttons
                     button.btn.btn-primary(data-loading-text='Loading...', data-complete-text='Completed', type='button', onclick='$(this).button("loading").siblings().prop("disabled", false);')
                         | $('#').button('loading')
+                    | &nbsp;
                     button.btn.btn-primary(type='button', onclick='$(this).prop("disabled", true); $("#").button("complete");', disabled='')
                         | $('#').button('complete')
+                    | &nbsp;
                     button.btn.btn-primary(type='button', onclick='$("#").button("reset").siblings().prop("disabled", true);', disabled='')
                         | $('#').button('reset')
                 br
